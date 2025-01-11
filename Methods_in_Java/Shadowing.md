@@ -42,12 +42,10 @@ public class Shadowing {
         new Shadowing().showCar();
     }
 }
-
+```
 # Output:
-```java
 Car Name: Bugatti
 Price: 43000000
----
 ##Explanation:
 The local variables car_name and price declared inside the showCar() method shadow the instance variables with the same name.
 The local variables are used in the method, and the instance variables are ignored unless explicitly accessed using this.
@@ -71,7 +69,7 @@ public class Shadowing {
         new Shadowing().showCar();
     }
 }
-
+```
 
 #Output:
 ```java
@@ -79,7 +77,7 @@ Car Name: Bugatti
 Price: 43000000
 Car Name: Ferrari
 Price: 50000000
-
+```
 ##Explanation:
 By using this.car_name and this.price, the instance variables are explicitly accessed, bypassing the shadowing caused by local variables.
 ---
