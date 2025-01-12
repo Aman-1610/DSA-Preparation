@@ -7,10 +7,11 @@ public class Prime_7
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number : ");
         int num = sc.nextInt();
-        String prime = prime(num);
-        System.out.println("The number is : "+prime);
+       // String prime = prime(num);
+       boolean prime=prime(num);
+        System.out.println("The number is prime : "+prime);
     }
-    static String prime(int a)
+   /*  static String prime(int a)
     {
         int count=0;
         for(int i=1;i<=a;i++)
@@ -26,5 +27,21 @@ public class Prime_7
         }
         else 
         return "Not Prime";
+    } */
+   static boolean prime(int n)
+   {
+    if(n<=1)
+    {
+        return false;
     }
+    int count=0;
+    for(int i=1;i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            count++;
+        }
+    }
+    return count==2;
+   }
 }
