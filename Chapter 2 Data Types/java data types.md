@@ -134,6 +134,128 @@ By understanding these concepts, you can write efficient and readable Java progr
 
 ---
 
-![Java Data Types](image.png)  
-![Constants and Variables](image-1.png)  
-![Java Keywords](image-2.png)
+# Data Types Revisited
+
+So far, we have used only `int` to deal with integer values and `float` to deal with real values. However, Java provides many flavors of integers and reals. Let us begin with integers.
+
+---
+
+## Integer Types
+
+Java provides 4 types of integers: `byte`, `short`, `int`, and `long` of sizes **1 byte**, **2 bytes**, **4 bytes**, and **8 bytes** respectively.
+
+| Data Type | Size  | Range                          |
+|-----------|-------|--------------------------------|
+| `byte`    | 1 byte| -128 to 127                   |
+| `short`   | 2 bytes| -32,768 to 32,767             |
+| `int`     | 4 bytes| -2,147,483,648 to 2,147,483,647|
+| `long`    | 8 bytes| -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807|
+
+---
+
+### Finer Points of Integer Types
+
+1. **Default Type**:
+   - By default, a number without a decimal point is treated as an `int`.
+   - If the value being assigned exceeds the range of the variable, an error occurs. For example:
+     ```java
+     byte a = 300;       // error
+     short b = 40000;    // error
+     int c = 2200000000; // error
+     ```
+
+2. **Long Integer**:
+   - To treat an integer as a `long`, add a suffix `L` or `l` at its end. For example:
+     ```java
+     long a = 365L * 1000;
+     ```
+
+3. **Underscores for Readability**:
+   - Use underscores between digits in a number to improve readability. For example:
+     ```java
+     long creditCardNo = 1211_5178_9212_4231L;
+     ```
+   - **Note**: You cannot use underscores at the beginning or end of a number, or prior to the suffix `L`.
+
+---
+
+## Real Types
+
+Real numbers can be represented as `float` and `double`. The difference between them is the number of bytes occupied, their ranges, and their precision.
+
+| Data Type | Size  | Range                          | Precision      |
+|-----------|-------|--------------------------------|----------------|
+| `float`   | 4 bytes| ±3.40282347E+38F              | 6-7 decimal digits |
+| `double`  | 8 bytes| ±1.79769313486231570E+308     | 15 decimal digits |
+
+---
+
+### Finer Points of Real Types
+
+1. **Default Type**:
+   - By default, a number with a decimal point is treated as a `double`.
+   - To treat it as a `float`, add a suffix `f` or `F`. For example:
+     ```java
+     float x = 3.5;    // error
+     float y = 3.5f;   // correct
+     double d = 3.5f;  // correct
+     double e = 3.5;   // correct
+     ```
+
+2. **Double Suffix**:
+   - To treat an integer number as a `double`, use the suffix `d` or `D`. For example:
+     ```java
+     double a = 3d;
+     ```
+
+3. **Underscores for Readability**:
+   - Use underscores between digits in a number to improve readability. For example:
+     ```java
+     float pi = 3.14_28_57F;
+     ```
+   - **Note**: You cannot use underscores at the beginning or end of a number, prior to the suffix `F`, or adjacent to the decimal point.
+
+4. **Exponential Notation**:
+   - For very small or very large numbers, use exponential notation. For example:
+     ```java
+     float a = 0.0000341295f;  // normal notation
+     double b = 3214.23221;    // normal notation
+     float c = 3.41295e-5f;   // exponential notation
+     double d = 3.21e3;        // exponential notation
+     ```
+
+5. **Precision Loss**:
+   - A real number stored in `float` or `double` is stored in binary form. During conversion from decimal to binary, some precision may be lost.
+   - For example, `5.375` and `5.375f` are not equal because `5.375` as a `double` is represented as a 64-bit binary number, while `5.375f` as a `float` is represented as a 32-bit binary number, resulting in some loss of precision.
+
+---
+
+## Summary
+
+- **Integer Types**: `byte`, `short`, `int`, `long`
+- **Real Types**: `float`, `double`
+- Use suffixes (`L`, `f`, `d`) to specify the type explicitly.
+- Use underscores (`_`) to improve readability in large numbers.
+- Be cautious about precision loss when working with `float` and `double`.
+
+
+# `char` Data Type
+
+A `char` data type represents a character expressed in **Unicode format**. The Unicode format has slowly replaced its predecessor, **ASCII format**. Characters in most of the known written languages used in the world can be represented using Unicode format.
+
+In addition to the normal form, a character constant can also be specified using Unicode representation. This is shown below:
+
+```java
+char ch = 'X';    // character literal
+char dh = '\u0058';   // Unicode
+```
+# `boolean` Data Type
+
+The `boolean` data type can take Boolean values, `true` and `false`. A variable of the type `boolean` can either be assigned a Boolean value or an expression that evaluates to a Boolean value. This is shown below:
+
+```java
+boolean a = false;
+System.out.println("a = " + a);  // Output: a = false
+
+boolean b = 4 > 2;
+System.out.println("b = " + b);  // Output: b = true
