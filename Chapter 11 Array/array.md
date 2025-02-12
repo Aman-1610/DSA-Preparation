@@ -27,3 +27,17 @@ This statement allocates space for 30 integers in memory and returns the base ad
 ## Where is it stored, in the heap or stack?
 In Java, arrays are objects, and objects are stored in the heap memory. 
 The reference variable 'marks' is stored in the stack memory, but the actual array elements are stored in the heap memory.
+
+## Accessing Elements of an Array
+Once an array is created, its individual elements can be accessed using the element's position in the array. All the arrays elemnts are counted, starting with 0.
+
+## Entering data into an Array
+```java
+for ( i = 0 ; i <= 29 ; i++ ) 
+{ 
+System.out.println ( "Enter marks " ) ; 
+marks[ i ] = scn.nextInt( ) ;  
+}
+```
+First time through the loop, i has a value 0, so the first value read through nextInt( ) function will be stored in marks[ 0 ]. This process will be repeated 30 times till the last values gets stored at marks[ 29 ]. 
+
