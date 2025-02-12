@@ -24,6 +24,6 @@ marks = new int[30];
 ```
 This statement allocates space for 30 integers in memory and returns the base address (starting address) of this memory chunk.
 
-##Where is it stored, in the heap or stack?
+## Where is it stored, in the heap or stack?
 In Java, arrays are objects, and objects are stored in the heap memory. 
 The reference variable 'marks' is stored in the stack memory, but the actual array elements are stored in the heap memory.
