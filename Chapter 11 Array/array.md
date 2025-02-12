@@ -14,9 +14,8 @@ Like other variables, an array needs to be declared. In our program, we have don
 
 ```java
 int[] marks;
-
+```
 This statement tells the compiler that 'marks' is a reference to an array of integers.
----
 
 Once the reference to the array is declared, we have to allocate space for the array in memory. This is done using the statement:
 
