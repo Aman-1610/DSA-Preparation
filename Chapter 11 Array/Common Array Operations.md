@@ -47,3 +47,12 @@ New array contents
 Cleared array 
 0 0 0 0 0 0  
 ```
+The sort( ) function arranges the elements of the array in ascending 
+order, whereas, the binarySearch( ) function searches for an element in 
+the sorted array and reports its position in the array. The copyOf( )
+function copies the contents of one array into another, whereas fill( ) 
+function sets each array elements value to 0. You can watch these 
+effects in the output of the program. All these functions are static 
+functions, hence the syntax used to call them is classname.functioname( ). You can try your hand at other functions 
+present in the Arrays class to get a hang of them. 
+
