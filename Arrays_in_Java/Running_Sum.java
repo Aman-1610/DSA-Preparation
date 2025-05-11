@@ -1,6 +1,6 @@
 
 import java.util.*;
-public class Running_Sum
+public class Running_Sum//1480 leetcode problem statement
 {
     public static void main(String args[])
     {

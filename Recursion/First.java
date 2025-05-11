@@ -3,10 +3,10 @@ class First
     static int count=0;
     static void f()
     {
-        // if(count==4)
-        // {
-        //     return;    //base condition for stoping the recursion
-        // }
+        if(count==10)
+        {
+            return;    //base condition for stoping the recursion
+        }
         System.out.println("1");
         count++;
         f();
